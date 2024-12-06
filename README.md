@@ -10,7 +10,7 @@ A biblioteca `so.h` implementa primitivas de sincronização de baixo nível uti
 4. [Barreira](#barreira)
 5. [Read-Write Lock](#readWrite_lock)
 6. [Exemplos de Uso](#exemplos_de_uso)
-7. [Comclusão](#conclusão)
+7. [Conclusão](#conclusão)
 
 ---
 
