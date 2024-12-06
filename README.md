@@ -15,8 +15,7 @@ A biblioteca `so.h` implementa primitivas de sincronização de baixo nível uti
 ---
 
 ## Mutex
-
-    Um Mutex é utilizado para garantir que apenas uma thread acesse uma seção crítica de cada vez. Ele é implementado usando operações atômicas para evitar a necessidade de bloqueios de kernel, proporcionando uma forma eficiente de sincronização.
+Um Mutex é utilizado para garantir que apenas uma thread acesse uma seção crítica de cada vez. Ele é implementado usando operações atômicas para evitar a necessidade de bloqueios de kernel, proporcionando uma forma eficiente de sincronização.
 
 ### Estrutura
 ```c    
@@ -37,8 +36,7 @@ unlock_mutex(Mutex *mutex): Desbloqueia o mutex, permitindo que outras threads a
 void unlock_mutex(Mutex *mutex);
 ```
 ## Semáforo
-
-    O Semáforo controla o acesso a um recurso compartilhado, permitindo que múltiplas threads acessem esse recurso simultaneamente até o limite definido.
+O Semáforo controla o acesso a um recurso compartilhado, permitindo que múltiplas threads acessem esse recurso simultaneamente até o limite definido.
 
 ### Estrutura
 ```c  
@@ -59,8 +57,7 @@ signal_semaphore(Semaphore *sem): Incrementa o valor do semáforo, liberando uma
 void signal_semaphore(Semaphore *sem);
 ```
 ## Variável_de_Condição
-
-    As Variáveis de Condição são usadas para sincronizar a execução de threads que precisam esperar ou ser notificadas quando uma condição específica for atendida.
+As Variáveis de Condição são usadas para sincronizar a execução de threads que precisam esperar ou ser notificadas quando uma condição específica for atendida.
 
 ### Estrutura
 ```c  
@@ -85,8 +82,7 @@ cond_broadcast(Cond *cond): Sinaliza todas as threads esperando na variável de 
 void cond_broadcast(Cond *cond);
 ```
 ## Barreira
-
-    A Barreira é usada para sincronizar um conjunto de threads que devem esperar até que todas cheguem a um ponto específico antes de prosseguir.
+A Barreira é usada para sincronizar um conjunto de threads que devem esperar até que todas cheguem a um ponto específico antes de prosseguir.
 
 ### Estrutura
 ```c  
@@ -142,16 +138,16 @@ Implementação de produtores e consumidores.
 Leitura e escrita concorrente em dados compartilhados.
 Sincronização de múltiplas threads para realizar tarefas em conjunto.
 
-### Testes
-Alguns testes realizados:
+## Testes
 
-Testes especificos: 
-[Test](testeEspecificos/test.c)
 
-Testes praticos:
--[Filosofo](testePratico/Filosofos.c)
--[Matriz](testePratico/MatrizesParalela.c)
--[PC](testePratico/ProdutorConsumidor.c)
+### Testes especificos: 
+- [Test](testeEspecificos/test.c)
+
+### Testes praticos:
+- [Filosofo](testePratico/Filosofos.c)
+- [Matriz](testePratico/MatrizesParalela.c)
+- [PC](testePratico/ProdutorConsumidor.c)
 
 # Conclusão
 A biblioteca `so.h` é uma implementação simples e eficiente de primitivas de sincronização, utilizando operações atômicas para evitar o uso de chamadas de sistema pesadas e garantir o acesso controlado a recursos compartilhados entre múltiplas threads.
