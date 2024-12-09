@@ -103,7 +103,7 @@ void barrier_wait(Barrier *barrier);
 ```
 ## ReadWrite_Lock
     
-    O Read-Write Lock permite múltiplas threads acessarem recursos para leitura simultaneamente, mas garante que apenas uma thread tenha acesso para escrita por vez, bloqueando as outras.
+ O Read-Write Lock permite múltiplas threads acessarem recursos para leitura simultaneamente, mas garante que apenas uma thread tenha acesso para escrita por vez, bloqueando as outras.
 
 ### Estrutura
 ```c  
